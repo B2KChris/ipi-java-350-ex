@@ -105,29 +105,5 @@ public class EmployeTest {
         //Then
         Assertions.assertThat(nbAnneeAnciennete).isEqualTo(5);
     }
-
-    //date d'embauche null => égal à 0
-  /*  @Test
-    public void testNbAnneeAncienneteDateEmbaucheNull(){
-        //Given
-        Employe employe = new Employe();
-        employe.setDateEmbauche(null);
-        //When
-        Integer nbAnneeAnciennete = employe.getNombreAnneeAnciennete();
-        //Then
-        Assertions.assertThat(nbAnneeAnciennete).isEqualTo(0);
-    }
-*/
-    //Un an de plus par rapport à maintenant => égal à 0
-   /* @Test
-    public void testNbAnneeAncienneteDateEmbaucheFuture(){
-        //Given
-        Employe employe = new Employe();
-        employe.setDateEmbauche(LocalDate.now().plusYears(1));
-        //When
-        Integer nbAnneeAnciennete = employe.getNombreAnneeAnciennete();
-        //Then
-        Assertions.assertThat(nbAnneeAnciennete).isEqualTo(0);
-    }
-*/
+    
 }
