@@ -68,15 +68,5 @@ public class EmployeTest {
         Assertions.assertThat(nbAnneeAnciennete).isEqualTo(5);
 
     }
-    @Test
-    public void testNbAnneeAnciennete0(){
-        //Given
-        Employe employe = new Employe();
-        employe.setDateEmbauche(LocalDate.now());
-        //When
-        Integer nbAnneeAnciennete = employe.getNombreAnneeAnciennete();
-        //Then
-        Assertions.assertThat(nbAnneeAnciennete).isEqualTo(0);
-    }
-
+ 
 }
