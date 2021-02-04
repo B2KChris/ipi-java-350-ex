@@ -14,7 +14,6 @@ public class EmployeTest {
         employe.setDateEmbauche(LocalDate.now());
         //When =>
         Integer nbAnneeAnciennete = employe.getNombreAnneeAnciennete();
-
         //Then
         Assertions.assertThat(nbAnneeAnciennete).isEqualTo(0);
     }
@@ -80,30 +79,4 @@ public class EmployeTest {
         Assertions.assertThat(nbAnneeAnciennete).isEqualTo(0);
     }
 
-    //Date aléatoire dans le passé => Supérieur à 0
-//Eviter les tests avec données aléatoires
-//Un an en moins par rapport à maintenant => égale à 1
-    @Test
-    public void testNbAnneeAnciennete1(){
-        //Given
-        Employe employe = new Employe();
-        employe.setDateEmbauche(LocalDate.now().minusYears(1));
-        //When
-        Integer nbAnneeAnciennete = employe.getNombreAnneeAnciennete();
-        //Then
-        Assertions.assertThat(nbAnneeAnciennete).isEqualTo(1);
-    }
-
-    //Cinq ans en moins par rapport à maintenant => égale à 5
-    @Test
-    public void testNbAnneeAnciennete5(){
-        //Given
-        Employe employe = new Employe();
-        employe.setDateEmbauche(LocalDate.now().minusYears(5));
-        //When
-        Integer nbAnneeAnciennete = employe.getNombreAnneeAnciennete();
-        //Then
-        Assertions.assertThat(nbAnneeAnciennete).isEqualTo(5);
-    }
-    
 }
